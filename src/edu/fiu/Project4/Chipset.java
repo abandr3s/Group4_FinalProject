@@ -7,10 +7,19 @@ import edu.fiu.sysdesign.SelfCheckCapable;
 import edu.fiu.sysdesign.SelfCheckUtils;
 
 /**
+ * This is the Chipset Class 
  * @author Group 4 
  *
  */
 public class Chipset implements SelfCheckCapable {
+	
+	/** Attributes **/
+	String cruise_name;
+	int ship_numer;
+	int capacity;
+	int storage;
+	int rooms;
+	
 	
 	/* Compositions */
 	AP_Gateway mygateway;
@@ -18,7 +27,7 @@ public class Chipset implements SelfCheckCapable {
 	LED myled;
 	Prox_sensor myproxsensor;
 	
-	/*Constructor*/
+	/*Constructors*/
 	public Chipset() {
 		mygateway = new AP_Gateway();
 		myroom = new Room_door();
@@ -26,11 +35,7 @@ public class Chipset implements SelfCheckCapable {
 		myproxsensor = new Prox_sensor();
 		 
 	}
-	
-	/******************** Class Methods *******************************/
-
-	/******************** Class Methods *******************************/
-	
+		
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
@@ -59,16 +64,25 @@ public class Chipset implements SelfCheckCapable {
 		mychipset.reset_voyage(); 
 	}
 
-	private void reset_voyage() {
+	/**
+	 * This is the reset Voyage Method - It is used to clear passenger information and door access after a trip ends. 
+	 */
+	public void reset_voyage() {
 		// TODO Auto-generated method stub
 		System.out.println("Reset End Voyage");
 		mygateway.Establish_wifi_connection();
 		myled.flash_amber();
-		System.out.println("Room Access Updated Sucess");
+		room_access_update();
 		myled.flash_green();
 		myproxsensor.reset_sensor();
 		System_check.system_check();
 		System.out.println("Ready to Use");
 	}
-
+	
+	/**
+	 *  This is the room access update method - It updates passenger information to have access to the rooms. 
+	 */
+    public void room_access_update() {
+    	System.out.println("Room Access Updated Sucess");
+    }
 }

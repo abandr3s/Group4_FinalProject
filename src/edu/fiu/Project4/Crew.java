@@ -7,7 +7,8 @@ import edu.fiu.sysdesign.SelfCheckCapable;
 import edu.fiu.sysdesign.SelfCheckUtils;
 
 /**
- * @author aband
+ * This is the Crew Class
+ * @author Group 4 
  *
  */
 public class Crew implements SelfCheckCapable {
@@ -29,7 +30,9 @@ public class Crew implements SelfCheckCapable {
 		// TODO Auto-generated method stub
 		return SelfCheckUtils.checkComponents(this);
 	}
-
+    /**
+     * This is the Room Access Update method - It is used to update information about voyage, passenger and access to rooms
+     */
 	public void room_access_updates() {
 		// TODO Auto-generated method stub
        System.out.println("Room Access Update");		

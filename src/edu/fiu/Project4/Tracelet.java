@@ -4,9 +4,11 @@
 package edu.fiu.Project4;
 
 import edu.fiu.sysdesign.SelfCheckCapable;
+import edu.fiu.sysdesign.SelfCheckUtils;
 
 /**
- * @author aband
+ * This is the Tracelet Class
+ * @author Group 4
  *
  */
 public class Tracelet implements SelfCheckCapable {
@@ -15,60 +17,60 @@ public class Tracelet implements SelfCheckCapable {
 	/******************** Class Methods *******************************/
 	
 	 
-	public void store_data() {
+	void store_data() {
 		// TODO - implement Tracelet.store_data
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void send_data() {
+	void send_data() {
 		// TODO - implement Tracelet.send_data
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void receive_data() {
+	void receive_data() {
 		// TODO - implement Tracelet.receive_data
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void sound_alarm() {
+	void sound_alarm() {
 		// TODO - implement Tracelet.sound_alarm
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void alarm_off() {
+	void alarm_off() {
 		// TODO - implement Tracelet.alarm_off
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
 	
-	public void light_LED(int RGB) {
+	void light_LED(int RGB) {
 		// TODO - implement Tracelet.light_LED
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void prox_check() {
+	void prox_check() {
 		// TODO - implement Tracelet.prox_check
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void start_15_minute_timer() {
+	void start_15_minute_timer() {
 		// TODO - implement Tracelet.start_15_minute_timer
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void ID_booking_no() {
+	void ID_booking_no() {
 		// TODO - implement Tracelet.ID_booking_no
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void alert_off() {
+	void alert_off() {
 		// TODO - implement Tracelet.alert_off
-		throw new UnsupportedOperationException();
+		return null;
 	}
 
-	public void overwrite_event_count() {
+	void overwrite_event_count() {
 		// TODO - implement Tracelet.overwrite_event_count
-		throw new UnsupportedOperationException();
+		return null;
 	}	
 	/******************** Class Methods *******************************/
 
@@ -76,19 +78,19 @@ public class Tracelet implements SelfCheckCapable {
 	@Override
 	public String getComponentName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Tracelet";
 	}
 
 	@Override
 	public boolean selfCheck() {
 		// TODO Auto-generated method stub
-		return false;
+		return SelfCheckUtils.randomCheck(0.05);
 	}
 
 	@Override
 	public boolean runSelfCheck() {
 		// TODO Auto-generated method stub
-		return false;
+		return SelfCheckUtils.checkComponents(this);
 	}
 
 }

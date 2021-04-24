@@ -7,7 +7,8 @@ import edu.fiu.sysdesign.SelfCheckCapable;
 import edu.fiu.sysdesign.SelfCheckUtils;
 
 /**
- * @author aband
+ * This is the Ship Class
+ * @author Group 4
  *
  */
 public class Ship implements SelfCheckCapable {
